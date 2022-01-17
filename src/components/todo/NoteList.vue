@@ -153,7 +153,7 @@ function showModal(note) {
 }
 
 const updateNote = async (note) => {
-	await updateDoc(doc(db, 'notes', note.id), {
+	await updateDoc(doc(db, `user/${user.uid}/notes`, note.id), {
 		title: note.title,
 		description: note.description
 	})

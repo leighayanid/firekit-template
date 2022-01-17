@@ -12,7 +12,7 @@
 
 <p align="center">
 <br>
-<a href="">🖥 Online Preview</a>
+<a href="https://firekit-template.vercel.app/">🖥 Online Preview</a>
 <br><br>
 <a href="https://stackblitz.com/github/leighayanid/firekit-template"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
 </p>
