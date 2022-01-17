@@ -51,8 +51,12 @@
 			</div>
 			<p v-if="errMsg" class="text-red-500">{{ errMsg }}</p>
 
-			<button class="bg-slate-700 p-2 mb-2 rounded w-full" type="submit">
-				Register
+			<button
+				class="bg-slate-700 p-2 mb-2 rounded w-full"
+				type="submit"
+				:disabled="loading.value"
+			>
+				{{ loading.value ? 'Please wait...' : 'Register' }}
 			</button>
 		</Form>
 	</div>
@@ -68,6 +72,14 @@ const email = ref('')
 const password = ref('')
 const errMsg = ref('')
 const toggle = ref(false)
+
+// eslint-disable-next-line no-undef
+defineProps({
+	loading: {
+		type: Boolean,
+		default: false
+	}
+})
 
 // eslint-disable-next-line no-undef
 const emit = defineEmits(['submit'])

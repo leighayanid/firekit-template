@@ -18,11 +18,6 @@ export const useFirebaseAuth = defineStore('auth', {
         errMsg: null,
         loading: false
     }),
-    mutations: {
-        setUser: (state, payload) => {
-            state.user = payload
-        }
-    },
     actions: {
         async login(email, password) {
             this.loading = true
@@ -61,6 +56,7 @@ export const useFirebaseAuth = defineStore('auth', {
                             displayName: '',
                             photoURL: ''
                         })
+                        this.loading = false
                     }
                 })
                 .catch(() => {
@@ -76,6 +72,11 @@ export const useFirebaseAuth = defineStore('auth', {
         async handleSignOut() {
             await signOut(auth)
             this.user = null
+        }
+    },
+    getters: {
+        isLoading(state) {
+            return state.loading
         }
     }
 })

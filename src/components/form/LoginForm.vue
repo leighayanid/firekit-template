@@ -52,8 +52,12 @@
 					errors.password
 				}}</span>
 			</div>
-			<button class="bg-slate-700 p-2 mb-2 rounded w-full" type="submit">
-				Login
+			<button
+				class="bg-slate-700 p-2 mb-2 rounded w-full"
+				type="submit"
+				:disabled="loading.value"
+			>
+				{{ loading.value ? 'Logging in...' : 'Login' }}
 			</button>
 		</Form>
 	</div>
@@ -68,6 +72,14 @@ import { EyeIcon, EyeOffIcon } from '@heroicons/vue/solid'
 const email = ref('')
 const password = ref('')
 const toggle = ref(false)
+
+// eslint-disable-next-line no-undef
+defineProps({
+	loading: {
+		type: Boolean,
+		default: false
+	}
+})
 
 // eslint-disable-next-line no-undef
 const emit = defineEmits(['submit'])
