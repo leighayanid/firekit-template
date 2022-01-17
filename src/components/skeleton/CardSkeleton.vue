@@ -1,15 +1,27 @@
 <template>
-  <div>
-    <SkeletonBlock effect="wave" heigh="1.5em" width="100%" />
-  </div>
+	<div class="bg-slate-800 p-5 rounded flex flex-col mb-2">
+		<SkeletonBlock
+			width="80%"
+			height="20px"
+			effect="wave"
+			border-radius="3px"
+			class="mb-2"
+		/>
+
+		<skeleton-text tag="div" effect="wave" border-radius="3px">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet
+			ante dui. Praesent ut aliquam metus. Phasellus consectetur.
+		</skeleton-text>
+	</div>
 </template>
 
 <script>
-import { SkeletonBlock } from 'skeleton-elements/vue'
+import { SkeletonBlock, SkeletonText } from 'skeleton-elements/vue'
 
 export default {
-  components: {
-    SkeletonBlock
-  }
+	components: {
+		SkeletonBlock,
+		SkeletonText
+	}
 }
 </script>
