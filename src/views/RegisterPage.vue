@@ -1,11 +1,11 @@
 <template>
-	<div class="container">
-		<div class="flex flex-col">
-			<h1 class="mb-2 text-lg">Create an account</h1>
-			<RegisterForm :loading="isLoading" @submit="register" />
-			<GoogleLogin />
-		</div>
-	</div>
+  <div class="container">
+    <div class="flex flex-col">
+      <h1 class="mb-2 text-lg">Create an account</h1>
+      <RegisterForm :loading="isLoading" @submit="register" />
+      <GoogleLogin />
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -20,11 +20,11 @@ const router = useRouter()
 const isLoading = ref(false)
 
 const register = async (payload) => {
-	await auth.register(payload.email, payload.password)
-	router.push('/crud')
+  await auth.register(payload.email, payload.password)
+  router.push('/crud')
 }
 
 onMounted(() => {
-	isLoading.value = computed(() => auth.isLoading)
+  isLoading.value = computed(() => auth.isLoading)
 })
 </script>

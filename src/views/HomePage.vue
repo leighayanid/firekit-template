@@ -1,8 +1,8 @@
 <template>
-	<div class="container">
-		<AppLogos class="my-10" />
-		<README class="prose dark:prose-invert items-center" />
-	</div>
+  <div class="container">
+    <AppLogos class="my-10" />
+    <README class="prose dark:prose-invert items-center" />
+  </div>
 </template>
 
 <script setup>

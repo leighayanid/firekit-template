@@ -19,43 +19,43 @@
 
 ## App Features
 
--   🔐 Firebase Auth
--   🔥 Firebase Firestore
--   👱 Profile Management
--   🗒️ CRUD for Private Notes
+- 🔐 Firebase Auth
+- 🔥 Firebase Firestore
+- 👱 Profile Management
+- 🗒️ CRUD for Private Notes
 
 ## Project Features
 
--   [💚 Vue 3](https://v3.Vuejs.org) - Composition API, components auto importing, modules, etc.
+- [💚 Vue 3](https://v3.Vuejs.org) - Composition API, components auto importing, modules, etc.
 
--   ⚡️ Vite - Instant HMR
+- ⚡️ Vite - Instant HMR
 
--   🎨 [TailwindCSS](https://github.com/antfu/unocss) - Utility CSS Framework
+- 🎨 [TailwindCSS](https://github.com/antfu/unocss) - Utility CSS Framework
 
--   😃 Use icons from any icon sets in HeroIcons
+- 😃 Use icons from any icon sets in HeroIcons
 
--   🔥 The `<script setup>` syntax
+- 🔥 The `<script setup>` syntax
 
--   🍍 [State Management via Pinia](https://pinia.esm.dev/)
+- 🍍 [State Management via Pinia](https://pinia.esm.dev/)
 
--   📥 APIs auto importing - for Composition API, VueUse and custom composables.
+- 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
 ## Plugins
 
 ### Vue Modules
 
--   [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
--   [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
--   [VueFinalModal](https://vue-final-modal.org/) - tiny, renderless, mobile-friendly, feature-rich modal component for Vue.js.
--   [Vue-toaster](https://github.com/MeForma/vue-toaster) - toast notification plugin for vue 3
--   [Vee-validate](https://vee-validate.logaretm.com/v4/) - form validation for Vue
--   [yup](https://github.com/jquense/yup) - object schema validation
--   [Vitest](https://vitest.dev) - Vue 3 testing framework powered by Vite
+- [VueUse](https://github.com/vueuse/vueuse) - collection of useful composition APIs
+- [Pinia](https://pinia.esm.dev/) - intuitive, type safe, light and flexible Store for Vue.
+- [VueFinalModal](https://vue-final-modal.org/) - tiny, renderless, mobile-friendly, feature-rich modal component for Vue.js.
+- [Vue-toaster](https://github.com/MeForma/vue-toaster) - toast notification plugin for vue 3
+- [Vee-validate](https://vee-validate.logaretm.com/v4/) - form validation for Vue
+- [yup](https://github.com/jquense/yup) - object schema validation
+- [Vitest](https://vitest.dev) - Vue 3 testing framework powered by Vite
 
 ### Firebase 9 SDK
 
--   [firebase/auth](https://firebase.google.com/docs/auth/web/start) - Firebase Auth
--   [firebase/firestore](https://firebase.google.com/docs/firestore/quickstart) - Firestore
+- [firebase/auth](https://firebase.google.com/docs/auth/web/start) - Firebase Auth
+- [firebase/firestore](https://firebase.google.com/docs/firestore/quickstart) - Firestore
 
 ## IDE
 

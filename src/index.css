@@ -4,13 +4,13 @@
 
 html,
 body {
-    @apply dark:bg-gray-900 bg-gray-100 min-h-screen;
+  @apply dark:bg-gray-900 bg-gray-100 min-h-screen;
 }
 
 .router-link-exact-active {
-    @apply text-yellow-500;
+  @apply text-yellow-500;
 }
 
 .container {
-    @apply md:px-40 px-5;
+  @apply md:px-40 px-5;
 }

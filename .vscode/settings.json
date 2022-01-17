@@ -1,17 +1,17 @@
 {
-    "eslint.validate": ["vue", "javascript"],
-    "eslint.packageManager": "yarn",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.stylelint": true
-    },
-    "editor.quickSuggestions": {
-        "other": true,
-        "comments": false,
-        "strings": true
-    },
-    "css.validate": false,
-    "tailwindCSS.emmetCompletions": true,
-    "vetur.validation.template": false,
-    "editor.tabSize": 2
+  "eslint.validate": ["vue", "javascript"],
+  "eslint.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "css.validate": false,
+  "tailwindCSS.emmetCompletions": true,
+  "vetur.validation.template": false,
+  "editor.tabSize": 2
 }
