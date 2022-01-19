@@ -36,12 +36,13 @@
 
 <script setup>
 import { ref } from 'vue'
-import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore'
-import { getAuth } from 'firebase/auth'
+import { useAuth, useFirestore } from '@/composables/useFirebase'
+import { collection, addDoc, Timestamp } from 'firebase/firestore'
 
-const db = getFirestore()
-const user = getAuth().currentUser
+const { user } = useAuth()
+const { db } = useFirestore()
 
+// todo add validations
 const title = ref('')
 const description = ref('')
 
