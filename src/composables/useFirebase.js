@@ -1,5 +1,6 @@
 import { getAuth } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
+import { getStorage, ref } from 'firebase/storage'
 
 export function useAuth() {
   const user = getAuth().currentUser
@@ -14,5 +15,14 @@ export function useFirestore() {
 
   return {
     db
+  }
+}
+
+export function useStorage() {
+  const storage = getStorage()
+
+  return {
+    storage,
+    ref
   }
 }

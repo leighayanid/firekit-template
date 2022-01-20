@@ -21,6 +21,7 @@
 
 - 🔐 Firebase Auth
 - 🔥 Firebase Firestore
+- 💾 Firebase Storage
 - 👱 Profile Management
 - 🗒️ CRUD for Private Notes
 
@@ -56,6 +57,7 @@
 
 - [firebase/auth](https://firebase.google.com/docs/auth/web/start) - Firebase Auth
 - [firebase/firestore](https://firebase.google.com/docs/firestore/quickstart) - Firestore
+- [firebase/storage](https://firebase.google.com/docs/firestore/quickstart) - Storage
 
 ## IDE
 
@@ -80,6 +82,40 @@ npx degit leighayanid/firekit-template <your-app-name>
 cd <your-app-name>
 npm i or yarn
 ```
+
+Create a Firebase project. Copy and replace the configuration keys inside main.js
+
+For Firestore security, paste the following into the console rules tab:
+
+```
+// Allow read/write access on all documents to any user signed in to the application
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
+
+For storage, enable the storage feature in the Firebase console. Create a folder name 'profile'.
+
+To secure the storage, paste the following into the console storage rules tab:
+
+```
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read, write: if request.auth != null;
+    }
+  }
+}
+```
+
+That's it! You can now run the app and see it in action.
+
+If you like it, please star the repo and share it with your friends.
 
 Created by [leighayanid](https://leighdinaya.com) ❤️
 

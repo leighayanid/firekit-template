@@ -6,6 +6,7 @@ import { createPinia } from 'pinia'
 import { initializeApp } from 'firebase/app'
 import { initializeFirestore } from 'firebase/firestore'
 import 'firebase/firestore'
+import { getStorage } from 'firebase/storage'
 
 // plugins
 import Toaster from '@meforma/vue-toaster'
@@ -28,6 +29,7 @@ const firestoreSettings = {
   timestampsInSnapshots: true
 }
 
+getStorage(firebase)
 initializeFirestore(firebase, firestoreSettings)
 
 const app = createApp(App)

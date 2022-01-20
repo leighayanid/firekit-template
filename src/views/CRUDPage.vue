@@ -44,9 +44,9 @@ import NoteModal from '@/components/todo/NoteModal.vue'
 const show = ref(false)
 const vfm = inject('$vfm')
 
-const NoteList = defineAsyncComponent({
-  loader: () => import('@/components/todo/NoteList.vue')
-})
+const NoteList = defineAsyncComponent(() =>
+  import('@/components/todo/NoteList.vue')
+)
 
 function showModal() {
   show.value = true
