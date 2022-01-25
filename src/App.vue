@@ -1,6 +1,5 @@
 <script setup>
 import Navbar from './components/Navbar.vue'
-import CardSkeleton from '@/components/skeleton/CardSkeleton.vue'
 </script>
 
 <template>

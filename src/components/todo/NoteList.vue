@@ -2,7 +2,6 @@
   <div>
     <div class="grid grid-cols-2 gap-3">
       <NoteListItem
-        :is="$slots.default?.()[0]"
         v-for="note in notes"
         :key="note.id"
         data-test="note-list"
