@@ -4,7 +4,7 @@
 
 html,
 body {
-  @apply dark:bg-gray-900 bg-gray-100 min-h-screen;
+  @apply min-h-screen bg-gray-100 dark:bg-gray-900;
 }
 
 .router-link-exact-active {
@@ -12,5 +12,5 @@ body {
 }
 
 .container {
-  @apply md:px-40 px-5;
+  @apply px-5 md:px-40;
 }

@@ -1,18 +1,18 @@
 <template>
-  <div class="bg-slate-800 border px-6 py-4 rounded-lg flex mt-2 h-48 relative">
-    <div class="flex flex-col flex-1">
-      <h1 class="text-white text-lg mb-2">🗒️ {{ note.title }}</h1>
-      <p class="text-white break-all">{{ note.description }}</p>
+  <div class="relative mt-2 flex h-48 rounded-lg border bg-slate-800 px-6 py-4">
+    <div class="flex flex-1 flex-col">
+      <h1 class="mb-2 text-lg text-white">🗒️ {{ note.title }}</h1>
+      <p class="break-all text-white">{{ note.description }}</p>
     </div>
     <div class="actions absolute top-2/3 left-3/4 flex space-x-2">
       <button @click="$emit('deleteNote', note)">
         <TrashIcon
-          class="w-8 h-8 hover:rounded-full p-2 hover:bg-slate-900 bg-slate-900 rounded-full"
+          class="h-8 w-8 rounded-full bg-slate-900 p-2 hover:rounded-full hover:bg-slate-900"
         />
       </button>
       <button @click="$emit('showModal', note)">
         <PencilIcon
-          class="w-8 h-8 hover:rounded-full p-2 hover:bg-slate-900 bg-yellow-600 rounded-full"
+          class="h-8 w-8 rounded-full bg-yellow-600 p-2 hover:rounded-full hover:bg-slate-900"
         />
       </button>
     </div>

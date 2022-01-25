@@ -13,13 +13,13 @@
           name="email"
           type="text"
           placeholder="email address"
-          class="p-2 mb-2 rounded text-slate-800 border border-slate-800"
+          class="mb-2 rounded border border-slate-800 p-2 text-slate-800"
         />
-        <span class="text-sm mb-2 text-red-600 capitalize">{{
+        <span class="mb-2 text-sm capitalize text-red-600">{{
           errors.email
         }}</span>
       </div>
-      <div class="form-group flex flex-col mb-2">
+      <div class="form-group mb-2 flex flex-col">
         <label for="email">Password</label>
         <div class="relative">
           <Field
@@ -28,7 +28,7 @@
             name="password"
             :type="!toggle ? 'password' : 'text'"
             placeholder="password"
-            class="p-2 mb-2 rounded text-slate-800 border border-slate-800 relative w-full"
+            class="relative mb-2 w-full rounded border border-slate-800 p-2 text-slate-800"
           />
           <div class="absolute inset-y-2 right-0 pr-3">
             <div class="flex items-center" @click="toggle = !toggle">
@@ -37,14 +37,14 @@
             </div>
           </div>
         </div>
-        <span class="text-sm mb-2 text-red-600 capitalize">{{
+        <span class="mb-2 text-sm capitalize text-red-600">{{
           errors.password
         }}</span>
       </div>
       <p v-if="errMsg" class="text-red-500">{{ errMsg }}</p>
 
       <button
-        class="bg-slate-700 p-2 mb-2 rounded w-full"
+        class="mb-2 w-full rounded bg-slate-700 p-2"
         type="submit"
         :disabled="loading.value"
       >

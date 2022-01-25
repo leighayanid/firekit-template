@@ -20,15 +20,15 @@
       <template #title><h1 class="mb-2">Edit Note</h1></template>
       <template #default="{ params }">
         <div
-          class="submit-form border-slate-900 dark:border-slate-50 border border-dashed p-5 rounded"
+          class="submit-form rounded border border-dashed border-slate-900 p-5 dark:border-slate-50"
         >
-          <div class="form-group flex flex-col mb-2">
+          <div class="form-group mb-2 flex flex-col">
             <label for="title">Title</label>
             <input
               id="title"
               v-model="params.title"
               type="text"
-              class="text-sm text-white p-2 border-b bg-slate-800"
+              class="border-b bg-slate-800 p-2 text-sm text-white"
               required
               name="title"
             />
@@ -39,13 +39,13 @@
             <textarea
               id="description"
               v-model="params.description"
-              class="text-sm text-white p-2 border-b bg-slate-800"
+              class="border-b bg-slate-800 p-2 text-sm text-white"
               required
               name="description"
             />
           </div>
           <button
-            class="bg-slate-800 text-white p-2 rounded w-full mt-2"
+            class="mt-2 w-full rounded bg-slate-800 p-2 text-white"
             @click="updateNote(params)"
           >
             Update

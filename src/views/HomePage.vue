@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <AppLogos class="my-10" />
-    <README class="prose dark:prose-invert items-center" />
+    <README class="prose items-center dark:prose-invert" />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-800 p-5 rounded flex flex-col mb-2">
+  <div class="mb-2 flex flex-col rounded bg-slate-800 p-5">
     <SkeletonBlock
       width="80%"
       height="20px"

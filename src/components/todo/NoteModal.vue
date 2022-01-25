@@ -14,7 +14,7 @@
       <slot :params="params"></slot>
     </div>
     <button class="absolute top-0 right-0 mt-2 mr-2" @click="close">
-      <XIcon class="w-8 h-8" />
+      <XIcon class="h-8 w-8" />
     </button>
   </vue-final-modal>
 </template>

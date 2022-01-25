@@ -1,24 +1,24 @@
 <template>
   <div class="container">
-    <h1 class="text-lg mb-5">Profile Information</h1>
+    <h1 class="mb-5 text-lg">Profile Information</h1>
     <div class="flex items-center justify-center">
-      <div class="box p-10 rounded bg-slate-800 h-fit w-full">
+      <div class="box h-fit w-full rounded bg-slate-800 p-10">
         <div
-          class="flex flex-col w-full text-center items-center space-y-2 mb-3"
+          class="mb-3 flex w-full flex-col items-center space-y-2 text-center"
         >
           <img :src="cPhotourl" alt="" class="h-20 w-20 rounded-full" />
           <UploadButton />
           <button @click="uploadProfilePhoto">Upload</button>
         </div>
         <div class="space-y-3">
-          <span v-if="!name" class="text-white flex"
-            >Update your profile <PencilIcon class="w-5 h-5 ml-2"
+          <span v-if="!name" class="flex text-white"
+            >Update your profile <PencilIcon class="ml-2 h-5 w-5"
           /></span>
           <div class="flex flex-col">
             <label for="name" class="text-sm"> Full Name </label>
             <input
               v-model="cName"
-              class="text-sm text-white p-2 border-b bg-slate-800 w-full"
+              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
               placeholder="Full Name"
             />
           </div>
@@ -26,29 +26,29 @@
             <label for="photourl" class="text-sm">Photo URL</label>
             <input
               v-model="cPhotourl"
-              class="text-sm text-white p-2 border-b bg-slate-800 w-full"
+              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
               placeholder="Photo URL"
             />
           </div>
 
           <button
-            class="bg-slate-900 p-2 text-white w-full rounded"
+            class="w-full rounded bg-slate-900 p-2 text-white"
             @click="updateProfile"
           >
             Update Profile
           </button>
 
-          <div class="space-y-2 mt-5">
+          <div class="mt-5 space-y-2">
             <div class="flex flex-col">
               <label for="email">Email address</label>
               <input
                 v-model="cEmail"
-                class="text-sm text-white p-2 border-b bg-slate-800 w-full"
+                class="w-full border-b bg-slate-800 p-2 text-sm text-white"
               />
             </div>
 
             <button
-              class="bg-slate-900 p-2 text-white w-full rounded"
+              class="w-full rounded bg-slate-900 p-2 text-white"
               @click="updateEmail"
             >
               Update Emaiil

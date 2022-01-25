@@ -38,10 +38,10 @@ const handleSignOut = () => {
           <li><router-link to="/profile">Profile</router-link></li>
           <button
             v-if="loggedIn"
-            class="flex items-center space-x-2 px-2 rounded border"
+            class="flex items-center space-x-2 rounded border px-2"
             @click="handleSignOut"
           >
-            <LogoutIcon class="w-4 h-4" />
+            <LogoutIcon class="h-4 w-4" />
           </button>
         </span>
         <span v-else class="flex space-x-4">

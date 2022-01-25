@@ -3,7 +3,7 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <div class="md:px-80 md:py-10 p-4 dark:text-white text-slate-800">
+  <div class="p-4 text-slate-800 dark:text-white md:px-80 md:py-10">
     <Navbar />
     <!-- <router-view /> -->
     <router-view v-slot="{ Component }" class="py-20">

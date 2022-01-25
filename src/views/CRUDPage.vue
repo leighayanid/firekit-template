@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="bg-slate-800 text-white p-2 rounded" @click="showModal">
+    <button class="rounded bg-slate-800 p-2 text-white" @click="showModal">
       ✏️ New note
     </button>
     <div class="mt-10">
@@ -11,7 +11,7 @@
       <suspense timeout="0">
         <NoteList class="mt-10" />
         <template #fallback>
-          <div class="grid grid-cols-2 gap-3 mt-10">
+          <div class="mt-10 grid grid-cols-2 gap-3">
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
