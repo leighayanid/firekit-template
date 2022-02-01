@@ -31,7 +31,7 @@
 
 - ⚡️ Vite - Instant HMR
 
-- 🎨 [TailwindCSS](https://github.com/antfu/unocss) - Utility CSS Framework
+- 🎨 [TailwindCSS](https://tailwindcss.com) - Utility CSS Framework
 
 - 😃 Use icons from any icon sets in HeroIcons
 
