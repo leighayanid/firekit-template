@@ -1,6 +1,41 @@
+
+<script setup>
+import { ref } from 'vue'
+import { useAuth, useFirestore } from '@/composables/useFirebase'
+import { collection, addDoc, Timestamp } from 'firebase/firestore'
+
+const { user } = useAuth()
+const { db } = useFirestore()
+
+// todo add validations
+const title = ref('')
+const description = ref('')
+
+const saveNotes = async () => {
+  try {
+    await addDoc(collection(db, `user/${user.uid}/notes`), {
+      title: title.value,
+      description: description.value,
+      created_at: Timestamp.now()
+    })
+    title.value = ''
+    description.value = ''
+    this.$emit('cancel')
+  } catch (e) {
+    console.error('Error adding document: ', e)
+  }
+}
+</script>
+
 <template>
   <div
-    class="submit-form rounded border border-dashed border-slate-900 p-5 dark:border-slate-50"
+    class="
+      submit-form
+      rounded
+      border border-dashed border-slate-900
+      p-5
+      dark:border-slate-50
+    "
   >
     <h1 class="mb-4 text-lg">📓 Add note</h1>
     <div class="form-group mb-2 flex flex-col">
@@ -33,31 +68,3 @@
     </button>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-import { useAuth, useFirestore } from '@/composables/useFirebase'
-import { collection, addDoc, Timestamp } from 'firebase/firestore'
-
-const { user } = useAuth()
-const { db } = useFirestore()
-
-// todo add validations
-const title = ref('')
-const description = ref('')
-
-const saveNotes = async () => {
-  try {
-    await addDoc(collection(db, `user/${user.uid}/notes`), {
-      title: title.value,
-      description: description.value,
-      created_at: Timestamp.now()
-    })
-    title.value = ''
-    description.value = ''
-    this.$emit('cancel')
-  } catch (e) {
-    console.error('Error adding document: ', e)
-  }
-}
-</script>

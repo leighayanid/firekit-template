@@ -1,3 +1,27 @@
+<script setup>
+import { ref, inject, defineAsyncComponent } from 'vue'
+import CardSkeleton from '@/components/skeleton/CardSkeleton.vue'
+import AddNote from '@/components/todo/AddNote.vue'
+import NoteModal from '@/components/todo/NoteModal.vue'
+
+const show = ref(false)
+const vfm = inject('$vfm')
+
+const NoteList = defineAsyncComponent(() =>
+  import('@/components/todo/NoteList.vue')
+)
+
+function showModal() {
+  show.value = true
+  vfm.show('add')
+}
+
+function cancel() {
+  show.value = false
+  vfm.hide('add')
+}
+</script>
+
 <template>
   <div>
     <button class="rounded bg-slate-800 p-2 text-white" @click="showModal">
@@ -34,27 +58,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, inject, defineAsyncComponent } from 'vue'
-import CardSkeleton from '@/components/skeleton/CardSkeleton.vue'
-import AddNote from '@/components/todo/AddNote.vue'
-import NoteModal from '@/components/todo/NoteModal.vue'
-
-const show = ref(false)
-const vfm = inject('$vfm')
-
-const NoteList = defineAsyncComponent(() =>
-  import('@/components/todo/NoteList.vue')
-)
-
-function showModal() {
-  show.value = true
-  vfm.show('add')
-}
-
-function cancel() {
-  show.value = false
-  vfm.hide('add')
-}
-</script>

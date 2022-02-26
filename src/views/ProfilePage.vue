@@ -1,65 +1,3 @@
-<template>
-  <div class="container">
-    <h1 class="mb-5 text-lg">Profile Information</h1>
-    <div class="flex items-center justify-center">
-      <div class="box h-fit w-full rounded bg-slate-800 p-10">
-        <div
-          class="mb-3 flex w-full flex-col items-center space-y-2 text-center"
-        >
-          <img :src="cPhotourl" alt="" class="h-20 w-20 rounded-full" />
-          <UploadButton />
-          <button @click="uploadProfilePhoto">Upload</button>
-        </div>
-        <div class="space-y-3">
-          <span v-if="!name" class="flex text-white"
-            >Update your profile <PencilIcon class="ml-2 h-5 w-5"
-          /></span>
-          <div class="flex flex-col">
-            <label for="name" class="text-sm"> Full Name </label>
-            <input
-              v-model="cName"
-              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              placeholder="Full Name"
-            />
-          </div>
-          <div class="flex flex-col">
-            <label for="photourl" class="text-sm">Photo URL</label>
-            <input
-              v-model="cPhotourl"
-              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              placeholder="Photo URL"
-            />
-          </div>
-
-          <button
-            class="w-full rounded bg-slate-900 p-2 text-white"
-            @click="updateProfile"
-          >
-            Update Profile
-          </button>
-
-          <div class="mt-5 space-y-2">
-            <div class="flex flex-col">
-              <label for="email">Email address</label>
-              <input
-                v-model="cEmail"
-                class="w-full border-b bg-slate-800 p-2 text-sm text-white"
-              />
-            </div>
-
-            <button
-              class="w-full rounded bg-slate-900 p-2 text-white"
-              @click="updateEmail"
-            >
-              Update Emaiil
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup>
 import { PencilIcon } from '@heroicons/vue/solid'
 import UploadButton from '@/components/base/UploadButton.vue'
@@ -190,3 +128,65 @@ const updateEmail = async () => {
   })
 }
 </script>
+
+<template>
+  <div class="container">
+    <h1 class="mb-5 text-lg">Profile Information</h1>
+    <div class="flex items-center justify-center">
+      <div class="box h-fit w-full rounded bg-slate-800 p-10">
+        <div
+          class="mb-3 flex w-full flex-col items-center space-y-2 text-center"
+        >
+          <img :src="cPhotourl" alt="" class="h-20 w-20 rounded-full" />
+          <UploadButton />
+          <button @click="uploadProfilePhoto">Upload</button>
+        </div>
+        <div class="space-y-3">
+          <span v-if="!name" class="flex text-white"
+            >Update your profile <PencilIcon class="ml-2 h-5 w-5"
+          /></span>
+          <div class="flex flex-col">
+            <label for="name" class="text-sm"> Full Name </label>
+            <input
+              v-model="cName"
+              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
+              placeholder="Full Name"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label for="photourl" class="text-sm">Photo URL</label>
+            <input
+              v-model="cPhotourl"
+              class="w-full border-b bg-slate-800 p-2 text-sm text-white"
+              placeholder="Photo URL"
+            />
+          </div>
+
+          <button
+            class="w-full rounded bg-slate-900 p-2 text-white"
+            @click="updateProfile"
+          >
+            Update Profile
+          </button>
+
+          <div class="mt-5 space-y-2">
+            <div class="flex flex-col">
+              <label for="email">Email address</label>
+              <input
+                v-model="cEmail"
+                class="w-full border-b bg-slate-800 p-2 text-sm text-white"
+              />
+            </div>
+
+            <button
+              class="w-full rounded bg-slate-900 p-2 text-white"
+              @click="updateEmail"
+            >
+              Update Emaiil
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

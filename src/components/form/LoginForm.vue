@@ -1,3 +1,25 @@
+<script setup>
+import { Form, Field } from 'vee-validate'
+import { EyeIcon, EyeOffIcon } from '@heroicons/vue/solid'
+import { useForm } from '@/composables/useForm'
+
+const { email, password, toggle, schema } = useForm()
+// eslint-disable-next-line no-undef
+defineProps({
+  loading: {
+    type: Boolean,
+    default: false
+  }
+})
+
+// eslint-disable-next-line no-undef
+const emit = defineEmits(['submit'])
+
+function login() {
+  emit('submit', { email: email.value, password: password.value })
+}
+</script>
+
 <template>
   <div>
     <Form
@@ -30,7 +52,15 @@
             name="password"
             :type="!toggle ? 'password' : 'text'"
             placeholder="password"
-            class="relative mb-2 w-full rounded border border-slate-800 p-2 text-slate-800"
+            class="
+              relative
+              mb-2
+              w-full
+              rounded
+              border border-slate-800
+              p-2
+              text-slate-800
+            "
           />
           <div class="absolute inset-y-2 right-0 pr-3">
             <div class="flex items-center" @click="toggle = !toggle">
@@ -54,25 +84,3 @@
     </Form>
   </div>
 </template>
-
-<script setup>
-import { Form, Field } from 'vee-validate'
-import { EyeIcon, EyeOffIcon } from '@heroicons/vue/solid'
-import { useForm } from '@/composables/useForm'
-
-const { email, password, toggle, schema } = useForm()
-// eslint-disable-next-line no-undef
-defineProps({
-  loading: {
-    type: Boolean,
-    default: false
-  }
-})
-
-// eslint-disable-next-line no-undef
-const emit = defineEmits(['submit'])
-
-function login() {
-  emit('submit', { email: email.value, password: password.value })
-}
-</script>

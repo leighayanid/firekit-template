@@ -1,3 +1,14 @@
+<script>
+import { SkeletonBlock, SkeletonText } from 'skeleton-elements/vue'
+
+export default {
+  components: {
+    SkeletonBlock,
+    SkeletonText
+  }
+}
+</script>
+
 <template>
   <div class="mb-2 flex flex-col rounded bg-slate-800 p-5">
     <SkeletonBlock
@@ -14,14 +25,3 @@
     </skeleton-text>
   </div>
 </template>
-
-<script>
-import { SkeletonBlock, SkeletonText } from 'skeleton-elements/vue'
-
-export default {
-  components: {
-    SkeletonBlock,
-    SkeletonText
-  }
-}
-</script>
