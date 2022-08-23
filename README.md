@@ -41,6 +41,8 @@
 
 - 📥 APIs auto importing - for Composition API, VueUse and custom composables.
 
+- Histoire - for writing stories
+
 ## Plugins
 
 ### Vue Modules

@@ -77,7 +77,7 @@ const cancel = () => {
 
 <template>
   <div>
-    <div class="grid grid-cols-2 gap-3">
+    <div v-auto-animate="{ duration: 200 }" class="grid grid-cols-2 gap-3">
       <NoteListItem
         v-for="note in notes"
         :key="note.id"
